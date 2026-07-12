@@ -1,0 +1,443 @@
+[check] Python version: 
+[check] PyTorch version: 
+[check] CUDA available: 
+[check] GPU: 
+ 
+============================================== 
+10.5 ImageNet watermark detection - 7 experiments 
+============================================== 
+ 
+--- [E1] ImageNet - no attack 
+wandb: Tracking run with wandb version 0.26.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\wandb\offline-run-20260712_223026-bg2ouftr
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\run_tree_ring_watermark_imagenet.py:37: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(args.model_path))
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|��         | 1/10 [01:36<14:24, 96.08s/it]
+ 20%|����        | 2/10 [05:30<23:41, 177.69s/it]
+ 30%|������       | 3/10 [08:05<19:28, 166.92s/it]
+ 40%|��������      | 4/10 [09:49<14:13, 142.31s/it]
+ 50%|����������     | 5/10 [11:39<10:53, 130.64s/it]
+ 60%|������������    | 6/10 [13:11<07:50, 117.58s/it]
+ 70%|��������������   | 7/10 [14:37<05:21, 107.33s/it]
+ 80%|����������������  | 8/10 [16:09<03:24, 102.15s/it]
+ 90%|������������������ | 9/10 [17:41<01:39, 99.23s/it] 
+100%|��������������������| 10/10 [19:15<00:00, 97.49s/it]
+100%|��������������������| 10/10 [19:15<00:00, 115.54s/it]
+auc: 1.0, acc: 1.0, TPR@1%FPR: 1.0
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync D:\大三\大三下\信息安全\大作业\tree-ring-watermark\wandb\offline-run-20260712_223026-bg2ouftr[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb\offline-run-20260712_223026-bg2ouftr\logs[0m
+ 
+--- [E2] ImageNet - rotation 75 deg 
+wandb: Tracking run with wandb version 0.26.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\wandb\offline-run-20260712_225032-nc5h2d2j
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\run_tree_ring_watermark_imagenet.py:37: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(args.model_path))
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|��         | 1/10 [02:00<18:08, 120.93s/it]
+ 20%|����        | 2/10 [06:38<28:24, 213.12s/it]
+ 30%|������       | 3/10 [10:33<26:02, 223.27s/it]
+ 40%|��������      | 4/10 [12:26<17:56, 179.39s/it]
+ 50%|����������     | 5/10 [14:05<12:32, 150.53s/it]
+ 60%|������������    | 6/10 [15:56<09:09, 137.28s/it]
+ 70%|��������������   | 7/10 [18:23<07:00, 140.20s/it]
+ 80%|����������������  | 8/10 [20:50<04:45, 142.52s/it]
+ 90%|������������������ | 9/10 [23:08<02:20, 140.96s/it]
+100%|��������������������| 10/10 [25:11<00:00, 135.51s/it]
+100%|��������������������| 10/10 [25:11<00:00, 151.15s/it]
+auc: 1.0, acc: 1.0, TPR@1%FPR: 1.0
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync D:\大三\大三下\信息安全\大作业\tree-ring-watermark\wandb\offline-run-20260712_225032-nc5h2d2j[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb\offline-run-20260712_225032-nc5h2d2j\logs[0m
+ 
+--- [E3] ImageNet - JPEG Q=25 
+wandb: Tracking run with wandb version 0.26.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\wandb\offline-run-20260712_231656-pb0x979e
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\run_tree_ring_watermark_imagenet.py:37: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(args.model_path))
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|��         | 1/10 [01:29<13:26, 89.57s/it]
+ 20%|����        | 2/10 [02:55<11:41, 87.67s/it]
+ 30%|������       | 3/10 [04:23<10:13, 87.68s/it]
+ 40%|��������      | 4/10 [05:53<08:50, 88.49s/it]
+ 50%|����������     | 5/10 [09:01<10:21, 124.37s/it]
+ 60%|������������    | 6/10 [10:44<07:48, 117.04s/it]
+ 70%|��������������   | 7/10 [13:27<06:36, 132.06s/it]
+ 80%|����������������  | 8/10 [16:06<04:41, 140.76s/it]
+ 90%|������������������ | 9/10 [17:32<02:03, 123.54s/it]
+100%|��������������������| 10/10 [18:55<00:00, 111.15s/it]
+100%|��������������������| 10/10 [18:55<00:00, 113.56s/it]
+auc: 0.86, acc: 0.9, TPR@1%FPR: 0.8
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync D:\大三\大三下\信息安全\大作业\tree-ring-watermark\wandb\offline-run-20260712_231656-pb0x979e[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb\offline-run-20260712_231656-pb0x979e\logs[0m
+ 
+--- [E4] ImageNet - crop 0.75/0.75 
+wandb: Tracking run with wandb version 0.26.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\wandb\offline-run-20260712_233655-c4v8p0uz
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\run_tree_ring_watermark_imagenet.py:37: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(args.model_path))
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|��         | 1/10 [01:19<11:54, 79.34s/it]
+ 20%|����        | 2/10 [02:37<10:27, 78.44s/it]
+ 30%|������       | 3/10 [03:57<09:14, 79.26s/it]
+ 40%|��������      | 4/10 [06:04<09:49, 98.33s/it]
+ 50%|����������     | 5/10 [10:03<12:24, 148.89s/it]
+ 60%|������������    | 6/10 [13:39<11:26, 171.55s/it]
+ 70%|��������������   | 7/10 [15:10<07:16, 145.37s/it]
+ 80%|����������������  | 8/10 [16:42<04:16, 128.27s/it]
+ 90%|������������������ | 9/10 [20:09<02:32, 152.92s/it]
+100%|��������������������| 10/10 [22:33<00:00, 150.30s/it]
+100%|��������������������| 10/10 [22:33<00:00, 135.37s/it]
+auc: 1.0, acc: 1.0, TPR@1%FPR: 1.0
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync D:\大三\大三下\信息安全\大作业\tree-ring-watermark\wandb\offline-run-20260712_233655-c4v8p0uz[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb\offline-run-20260712_233655-c4v8p0uz\logs[0m
+ 
+--- [E5] ImageNet - gaussian blur r=4 
+wandb: Tracking run with wandb version 0.26.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\wandb\offline-run-20260713_000041-5uatt2x8
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\run_tree_ring_watermark_imagenet.py:37: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(args.model_path))
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|��         | 1/10 [01:18<11:43, 78.19s/it]
+ 20%|����        | 2/10 [02:36<10:24, 78.10s/it]
+ 30%|������       | 3/10 [03:55<09:11, 78.78s/it]
+ 40%|��������      | 4/10 [05:17<07:59, 79.90s/it]
+ 50%|����������     | 5/10 [06:39<06:42, 80.57s/it]
+ 60%|������������    | 6/10 [08:01<05:24, 81.06s/it]
+ 70%|��������������   | 7/10 [09:22<04:03, 81.27s/it]
+ 80%|����������������  | 8/10 [10:43<02:42, 81.17s/it]
+ 90%|������������������ | 9/10 [12:04<01:21, 81.10s/it]
+100%|��������������������| 10/10 [13:25<00:00, 81.09s/it]
+100%|��������������������| 10/10 [13:25<00:00, 80.59s/it]
+auc: 1.0, acc: 1.0, TPR@1%FPR: 1.0
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync D:\大三\大三下\信息安全\大作业\tree-ring-watermark\wandb\offline-run-20260713_000041-5uatt2x8[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb\offline-run-20260713_000041-5uatt2x8\logs[0m
+ 
+--- [E6] ImageNet - gaussian noise std=0.1 
+wandb: Tracking run with wandb version 0.26.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\wandb\offline-run-20260713_001441-d9vhlbv2
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\run_tree_ring_watermark_imagenet.py:37: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(args.model_path))
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|��         | 1/10 [01:19<11:53, 79.30s/it]
+ 20%|����        | 2/10 [02:37<10:30, 78.79s/it]
+ 30%|������       | 3/10 [03:56<09:11, 78.77s/it]
+ 40%|��������      | 4/10 [05:14<07:51, 78.64s/it]
+ 50%|����������     | 5/10 [06:33<06:33, 78.65s/it]
+ 60%|������������    | 6/10 [07:52<05:15, 78.80s/it]
+ 70%|��������������   | 7/10 [09:11<03:56, 78.96s/it]
+ 80%|����������������  | 8/10 [10:31<02:38, 79.23s/it]
+ 90%|������������������ | 9/10 [11:51<01:19, 79.39s/it]
+100%|��������������������| 10/10 [13:10<00:00, 79.29s/it]
+100%|��������������������| 10/10 [13:10<00:00, 79.06s/it]
+auc: 1.0, acc: 1.0, TPR@1%FPR: 1.0
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync D:\大三\大三下\信息安全\大作业\tree-ring-watermark\wandb\offline-run-20260713_001441-d9vhlbv2[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb\offline-run-20260713_001441-d9vhlbv2\logs[0m
+ 
+--- [E7] ImageNet - brightness factor=6 
+wandb: Tracking run with wandb version 0.26.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\wandb\offline-run-20260713_002813-s3oj5w2p
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\run_tree_ring_watermark_imagenet.py:37: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(args.model_path))
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|��         | 1/10 [01:19<11:53, 79.28s/it]
+ 20%|����        | 2/10 [02:37<10:29, 78.70s/it]
+ 30%|������       | 3/10 [03:58<09:19, 79.89s/it]
+ 40%|��������      | 4/10 [05:26<08:17, 82.95s/it]
+ 50%|����������     | 5/10 [06:54<07:03, 84.76s/it]
+ 60%|������������    | 6/10 [10:46<08:59, 134.95s/it]
+ 70%|��������������   | 7/10 [14:58<08:39, 173.26s/it]
+ 80%|����������������  | 8/10 [19:16<06:39, 199.94s/it]
+ 90%|������������������ | 9/10 [21:41<03:03, 183.00s/it]
+100%|��������������������| 10/10 [23:08<00:00, 153.35s/it]
+100%|��������������������| 10/10 [23:08<00:00, 138.88s/it]
+auc: 0.61, acc: 0.75, TPR@1%FPR: 0.5
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync D:\大三\大三下\信息安全\大作业\tree-ring-watermark\wandb\offline-run-20260713_002813-s3oj5w2p[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb\offline-run-20260713_002813-s3oj5w2p\logs[0m
+ 
+============================================== 
+10.6 ImageNet FID - 1 experiment (10 samples) 
+============================================== 
+ 
+--- [F1] ImageNet - FID 
+wandb: Tracking run with wandb version 0.26.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\wandb\offline-run-20260713_010135-60eau5a2
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\run_tree_ring_watermark_imagenet_fid.py:43: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(args.model_path))
+
+  0%|          | 0/2 [00:00<?, ?it/s]
+ 50%|����������     | 1/2 [20:57<20:57, 1257.79s/it]
+100%|��������������������| 2/2 [39:31<00:00, 1173.07s/it]
+100%|��������������������| 2/2 [39:31<00:00, 1185.78s/it]
+
+  0%|          | 0/100 [00:00<?, ?it/s]
+  1%|          | 1/100 [01:04<1:46:34, 64.59s/it]
+  2%|��         | 2/100 [01:05<43:52, 26.86s/it]  
+  3%|��         | 3/100 [01:05<23:55, 14.80s/it]
+  4%|��         | 4/100 [01:05<14:37,  9.14s/it]
+  5%|��         | 5/100 [01:06<09:30,  6.00s/it]
+  6%|��         | 6/100 [01:06<06:26,  4.12s/it]
+  7%|��         | 7/100 [01:07<04:31,  2.92s/it]
+  8%|��         | 8/100 [01:07<03:16,  2.13s/it]
+  9%|��         | 9/100 [01:08<02:26,  1.61s/it]
+ 10%|��         | 10/100 [01:08<01:52,  1.25s/it]
+ 11%|��         | 11/100 [01:09<01:29,  1.01s/it]
+ 12%|����        | 12/100 [01:09<01:13,  1.19it/s]
+ 13%|����        | 13/100 [01:10<01:02,  1.39it/s]
+ 14%|����        | 14/100 [01:10<00:55,  1.56it/s]
+ 15%|����        | 15/100 [01:10<00:49,  1.71it/s]
+ 16%|����        | 16/100 [01:11<00:45,  1.84it/s]
+ 17%|����        | 17/100 [01:11<00:42,  1.94it/s]
+ 18%|����        | 18/100 [01:12<00:40,  2.01it/s]
+ 19%|����        | 19/100 [01:12<00:39,  2.07it/s]
+ 20%|����        | 20/100 [01:13<00:37,  2.11it/s]
+ 21%|����        | 21/100 [01:13<00:37,  2.13it/s]
+ 22%|������       | 22/100 [01:14<00:36,  2.16it/s]
+ 23%|������       | 23/100 [01:14<00:35,  2.19it/s]
+ 24%|������       | 24/100 [01:14<00:34,  2.19it/s]
+ 25%|������       | 25/100 [01:15<00:34,  2.20it/s]
+ 26%|������       | 26/100 [01:15<00:33,  2.20it/s]
+ 27%|������       | 27/100 [01:16<00:33,  2.20it/s]
+ 28%|������       | 28/100 [01:16<00:32,  2.21it/s]
+ 29%|������       | 29/100 [01:17<00:32,  2.20it/s]
+ 30%|������       | 30/100 [01:17<00:31,  2.20it/s]
+ 31%|������       | 31/100 [01:18<00:31,  2.21it/s]
+ 32%|��������      | 32/100 [01:18<00:30,  2.21it/s]
+ 33%|��������      | 33/100 [01:19<00:30,  2.20it/s]
+ 34%|��������      | 34/100 [01:19<00:29,  2.21it/s]
+ 35%|��������      | 35/100 [01:19<00:29,  2.20it/s]
+ 36%|��������      | 36/100 [01:20<00:29,  2.20it/s]
+ 37%|��������      | 37/100 [01:20<00:28,  2.21it/s]
+ 38%|��������      | 38/100 [01:21<00:28,  2.21it/s]
+ 39%|��������      | 39/100 [01:21<00:27,  2.20it/s]
+ 40%|��������      | 40/100 [01:22<00:27,  2.20it/s]
+ 41%|��������      | 41/100 [01:22<00:26,  2.20it/s]
+ 42%|����������     | 42/100 [01:23<00:26,  2.20it/s]
+ 43%|����������     | 43/100 [01:23<00:25,  2.20it/s]
+ 44%|����������     | 44/100 [01:24<00:25,  2.20it/s]
+ 45%|����������     | 45/100 [01:24<00:24,  2.20it/s]
+ 46%|����������     | 46/100 [01:24<00:24,  2.20it/s]
+ 47%|����������     | 47/100 [01:25<00:24,  2.20it/s]
+ 48%|����������     | 48/100 [01:25<00:23,  2.20it/s]
+ 49%|����������     | 49/100 [01:26<00:23,  2.21it/s]
+ 50%|����������     | 50/100 [01:26<00:22,  2.21it/s]
+ 51%|����������     | 51/100 [01:27<00:22,  2.21it/s]
+ 52%|������������    | 52/100 [01:27<00:21,  2.21it/s]
+ 53%|������������    | 53/100 [01:28<00:21,  2.20it/s]
+ 54%|������������    | 54/100 [01:28<00:20,  2.21it/s]
+ 55%|������������    | 55/100 [01:29<00:20,  2.21it/s]
+ 56%|������������    | 56/100 [01:29<00:19,  2.20it/s]
+ 57%|������������    | 57/100 [01:29<00:19,  2.21it/s]
+ 58%|������������    | 58/100 [01:30<00:19,  2.20it/s]
+ 59%|������������    | 59/100 [01:30<00:18,  2.20it/s]
+ 60%|������������    | 60/100 [01:31<00:18,  2.20it/s]
+ 61%|������������    | 61/100 [01:31<00:17,  2.20it/s]
+ 62%|��������������   | 62/100 [01:32<00:17,  2.20it/s]
+ 63%|��������������   | 63/100 [01:32<00:16,  2.20it/s]
+ 64%|��������������   | 64/100 [01:33<00:16,  2.20it/s]
+ 65%|��������������   | 65/100 [01:33<00:15,  2.20it/s]
+ 66%|��������������   | 66/100 [01:34<00:15,  2.20it/s]
+ 67%|��������������   | 67/100 [01:34<00:15,  2.20it/s]
+ 68%|��������������   | 68/100 [01:34<00:14,  2.19it/s]
+ 69%|��������������   | 69/100 [01:35<00:14,  2.19it/s]
+ 70%|��������������   | 70/100 [01:35<00:13,  2.19it/s]
+ 71%|��������������   | 71/100 [01:36<00:13,  2.19it/s]
+ 72%|����������������  | 72/100 [01:36<00:12,  2.19it/s]
+ 73%|����������������  | 73/100 [01:37<00:12,  2.19it/s]
+ 74%|����������������  | 74/100 [01:37<00:11,  2.20it/s]
+ 75%|����������������  | 75/100 [01:38<00:11,  2.20it/s]
+ 76%|����������������  | 76/100 [01:38<00:10,  2.20it/s]
+ 77%|����������������  | 77/100 [01:39<00:10,  2.20it/s]
+ 78%|����������������  | 78/100 [01:39<00:10,  2.20it/s]
+ 79%|����������������  | 79/100 [01:39<00:09,  2.20it/s]
+ 80%|����������������  | 80/100 [01:40<00:09,  2.20it/s]
+ 81%|����������������  | 81/100 [01:40<00:08,  2.20it/s]
+ 82%|������������������ | 82/100 [01:41<00:08,  2.20it/s]
+ 83%|������������������ | 83/100 [01:41<00:07,  2.20it/s]
+ 84%|������������������ | 84/100 [01:42<00:07,  2.20it/s]
+ 85%|������������������ | 85/100 [01:42<00:06,  2.20it/s]
+ 86%|������������������ | 86/100 [01:43<00:06,  2.22it/s]
+ 87%|������������������ | 87/100 [01:43<00:05,  2.23it/s]
+ 88%|������������������ | 88/100 [01:44<00:05,  2.23it/s]
+ 89%|������������������ | 89/100 [01:44<00:04,  2.23it/s]
+ 90%|������������������ | 90/100 [01:44<00:04,  2.23it/s]
+ 91%|������������������ | 91/100 [01:45<00:04,  2.24it/s]
+ 92%|��������������������| 92/100 [01:45<00:03,  2.24it/s]
+ 93%|��������������������| 93/100 [01:46<00:03,  2.24it/s]
+ 94%|��������������������| 94/100 [01:46<00:02,  2.24it/s]
+ 95%|��������������������| 95/100 [01:47<00:02,  2.25it/s]
+ 96%|��������������������| 96/100 [01:47<00:01,  2.25it/s]
+ 97%|��������������������| 97/100 [01:48<00:01,  2.25it/s]
+ 98%|��������������������| 98/100 [01:48<00:00,  2.26it/s]
+ 99%|��������������������| 99/100 [01:48<00:00,  2.25it/s]
+100%|��������������������| 100/100 [01:49<00:00,  2.26it/s]
+100%|��������������������| 100/100 [01:50<00:00,  1.11s/it]
+Warning: batch size is bigger than the data size. Setting batch size to data size
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+100%|��������������������| 1/1 [00:21<00:00, 21.30s/it]
+100%|��������������������| 1/1 [00:23<00:00, 23.74s/it]
+
+  0%|          | 0/100 [00:00<?, ?it/s]
+  1%|          | 1/100 [00:54<1:30:42, 54.97s/it]
+  2%|��         | 2/100 [00:55<37:23, 22.90s/it]  
+  3%|��         | 3/100 [00:55<20:26, 12.65s/it]
+  4%|��         | 4/100 [00:56<12:31,  7.83s/it]
+  5%|��         | 5/100 [00:56<08:12,  5.18s/it]
+  6%|��         | 6/100 [00:57<05:36,  3.58s/it]
+  7%|��         | 7/100 [00:57<03:58,  2.56s/it]
+  8%|��         | 8/100 [00:58<02:54,  1.89s/it]
+  9%|��         | 9/100 [00:58<02:11,  1.44s/it]
+ 10%|��         | 10/100 [00:59<01:42,  1.14s/it]
+ 11%|��         | 11/100 [00:59<01:23,  1.07it/s]
+ 12%|����        | 12/100 [01:00<01:09,  1.26it/s]
+ 13%|����        | 13/100 [01:00<01:01,  1.42it/s]
+ 14%|����        | 14/100 [01:01<00:55,  1.55it/s]
+ 15%|����        | 15/100 [01:01<00:50,  1.69it/s]
+ 16%|����        | 16/100 [01:01<00:46,  1.79it/s]
+ 17%|����        | 17/100 [01:02<00:43,  1.90it/s]
+ 18%|����        | 18/100 [01:02<00:41,  1.99it/s]
+ 19%|����        | 19/100 [01:03<00:39,  2.05it/s]
+ 20%|����        | 20/100 [01:03<00:38,  2.10it/s]
+ 21%|����        | 21/100 [01:04<00:37,  2.13it/s]
+ 22%|������       | 22/100 [01:04<00:36,  2.16it/s]
+ 23%|������       | 23/100 [01:05<00:35,  2.18it/s]
+ 24%|������       | 24/100 [01:05<00:34,  2.19it/s]
+ 25%|������       | 25/100 [01:06<00:34,  2.19it/s]
+ 26%|������       | 26/100 [01:06<00:33,  2.20it/s]
+ 27%|������       | 27/100 [01:06<00:33,  2.21it/s]
+ 28%|������       | 28/100 [01:07<00:32,  2.21it/s]
+ 29%|������       | 29/100 [01:07<00:32,  2.21it/s]
+ 30%|������       | 30/100 [01:08<00:31,  2.22it/s]
+ 31%|������       | 31/100 [01:08<00:31,  2.20it/s]
+ 32%|��������      | 32/100 [01:09<00:30,  2.20it/s]
+ 33%|��������      | 33/100 [01:09<00:30,  2.20it/s]
+ 34%|��������      | 34/100 [01:10<00:30,  2.20it/s]
+ 35%|��������      | 35/100 [01:10<00:29,  2.20it/s]
+ 36%|��������      | 36/100 [01:11<00:29,  2.20it/s]
+ 37%|��������      | 37/100 [01:11<00:28,  2.21it/s]
+ 38%|��������      | 38/100 [01:11<00:28,  2.21it/s]
+ 39%|��������      | 39/100 [01:12<00:27,  2.21it/s]
+ 40%|��������      | 40/100 [01:12<00:27,  2.22it/s]
+ 41%|��������      | 41/100 [01:13<00:26,  2.22it/s]
+ 42%|����������     | 42/100 [01:13<00:26,  2.22it/s]
+ 43%|����������     | 43/100 [01:14<00:25,  2.19it/s]
+ 44%|����������     | 44/100 [01:14<00:25,  2.20it/s]
+ 45%|����������     | 45/100 [01:15<00:24,  2.21it/s]
+ 46%|����������     | 46/100 [01:15<00:24,  2.23it/s]
+ 47%|����������     | 47/100 [01:15<00:23,  2.23it/s]
+ 48%|����������     | 48/100 [01:16<00:23,  2.22it/s]
+ 49%|����������     | 49/100 [01:16<00:22,  2.22it/s]
+ 50%|����������     | 50/100 [01:17<00:22,  2.22it/s]
+ 51%|����������     | 51/100 [01:17<00:22,  2.22it/s]
+ 52%|������������    | 52/100 [01:18<00:21,  2.22it/s]
+ 53%|������������    | 53/100 [01:18<00:21,  2.23it/s]
+ 54%|������������    | 54/100 [01:19<00:20,  2.23it/s]
+ 55%|������������    | 55/100 [01:19<00:20,  2.23it/s]
+ 56%|������������    | 56/100 [01:20<00:19,  2.23it/s]
+ 57%|������������    | 57/100 [01:20<00:19,  2.23it/s]
+ 58%|������������    | 58/100 [01:20<00:18,  2.23it/s]
+ 59%|������������    | 59/100 [01:21<00:18,  2.23it/s]
+ 60%|������������    | 60/100 [01:21<00:17,  2.23it/s]
+ 61%|������������    | 61/100 [01:22<00:17,  2.23it/s]
+ 62%|��������������   | 62/100 [01:22<00:17,  2.22it/s]
+ 63%|��������������   | 63/100 [01:23<00:16,  2.22it/s]
+ 64%|��������������   | 64/100 [01:23<00:16,  2.21it/s]
+ 65%|��������������   | 65/100 [01:24<00:15,  2.21it/s]
+ 66%|��������������   | 66/100 [01:24<00:15,  2.21it/s]
+ 67%|��������������   | 67/100 [01:24<00:14,  2.21it/s]
+ 68%|��������������   | 68/100 [01:25<00:14,  2.21it/s]
+ 69%|��������������   | 69/100 [01:25<00:13,  2.22it/s]
+ 70%|��������������   | 70/100 [01:26<00:13,  2.21it/s]
+ 71%|��������������   | 71/100 [01:26<00:13,  2.22it/s]
+ 72%|����������������  | 72/100 [01:27<00:12,  2.22it/s]
+ 73%|����������������  | 73/100 [01:27<00:12,  2.22it/s]
+ 74%|����������������  | 74/100 [01:28<00:11,  2.23it/s]
+ 75%|����������������  | 75/100 [01:28<00:11,  2.22it/s]
+ 76%|����������������  | 76/100 [01:29<00:10,  2.22it/s]
+ 77%|����������������  | 77/100 [01:29<00:10,  2.23it/s]
+ 78%|����������������  | 78/100 [01:29<00:09,  2.22it/s]
+ 79%|����������������  | 79/100 [01:30<00:09,  2.22it/s]
+ 80%|����������������  | 80/100 [01:30<00:09,  2.21it/s]
+ 81%|����������������  | 81/100 [01:31<00:08,  2.21it/s]
+ 82%|������������������ | 82/100 [01:31<00:08,  2.22it/s]
+ 83%|������������������ | 83/100 [01:32<00:07,  2.21it/s]
+ 84%|������������������ | 84/100 [01:32<00:07,  2.21it/s]
+ 85%|������������������ | 85/100 [01:33<00:06,  2.22it/s]
+ 86%|������������������ | 86/100 [01:33<00:06,  2.23it/s]
+ 87%|������������������ | 87/100 [01:34<00:05,  2.23it/s]
+ 88%|������������������ | 88/100 [01:34<00:05,  2.23it/s]
+ 89%|������������������ | 89/100 [01:34<00:04,  2.24it/s]
+ 90%|������������������ | 90/100 [01:35<00:04,  2.25it/s]
+ 91%|������������������ | 91/100 [01:35<00:03,  2.25it/s]
+ 92%|��������������������| 92/100 [01:36<00:03,  2.25it/s]
+ 93%|��������������������| 93/100 [01:36<00:03,  2.25it/s]
+ 94%|��������������������| 94/100 [01:37<00:02,  2.25it/s]
+ 95%|��������������������| 95/100 [01:37<00:02,  2.25it/s]
+ 96%|��������������������| 96/100 [01:38<00:01,  2.25it/s]
+ 97%|��������������������| 97/100 [01:38<00:01,  2.25it/s]
+ 98%|��������������������| 98/100 [01:38<00:00,  2.24it/s]
+ 99%|��������������������| 99/100 [01:39<00:00,  2.23it/s]
+100%|��������������������| 100/100 [01:39<00:00,  2.22it/s]
+100%|��������������������| 100/100 [01:40<00:00,  1.01s/it]
+fid_no_w: 15.87, fid_w: 16.61
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync D:\大三\大三下\信息安全\大作业\tree-ring-watermark\wandb\offline-run-20260713_010135-60eau5a2[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb\offline-run-20260713_010135-60eau5a2\logs[0m
+ 
+============================================== 
+Table 3 and 4 done! (8/8) 
+============================================== 
