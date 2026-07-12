@@ -1,0 +1,232 @@
+[check] Python version: 
+[check] PyTorch version: 
+[check] CUDA available: 
+[check] GPU: 
+ 
+============================================== 
+10.5 ImageNet watermark detection - 7 experiments 
+============================================== 
+ 
+--- [E1] ImageNet - no attack 
+wandb: Tracking run with wandb version 0.26.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\wandb\offline-run-20260712_223026-bg2ouftr
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\run_tree_ring_watermark_imagenet.py:37: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(args.model_path))
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|��         | 1/10 [01:36<14:24, 96.08s/it]
+ 20%|����        | 2/10 [05:30<23:41, 177.69s/it]
+ 30%|������       | 3/10 [08:05<19:28, 166.92s/it]
+ 40%|��������      | 4/10 [09:49<14:13, 142.31s/it]
+ 50%|����������     | 5/10 [11:39<10:53, 130.64s/it]
+ 60%|������������    | 6/10 [13:11<07:50, 117.58s/it]
+ 70%|��������������   | 7/10 [14:37<05:21, 107.33s/it]
+ 80%|����������������  | 8/10 [16:09<03:24, 102.15s/it]
+ 90%|������������������ | 9/10 [17:41<01:39, 99.23s/it] 
+100%|��������������������| 10/10 [19:15<00:00, 97.49s/it]
+100%|��������������������| 10/10 [19:15<00:00, 115.54s/it]
+auc: 1.0, acc: 1.0, TPR@1%FPR: 1.0
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync D:\大三\大三下\信息安全\大作业\tree-ring-watermark\wandb\offline-run-20260712_223026-bg2ouftr[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb\offline-run-20260712_223026-bg2ouftr\logs[0m
+ 
+--- [E2] ImageNet - rotation 75 deg 
+wandb: Tracking run with wandb version 0.26.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\wandb\offline-run-20260712_225032-nc5h2d2j
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\run_tree_ring_watermark_imagenet.py:37: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(args.model_path))
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|��         | 1/10 [02:00<18:08, 120.93s/it]
+ 20%|����        | 2/10 [06:38<28:24, 213.12s/it]
+ 30%|������       | 3/10 [10:33<26:02, 223.27s/it]
+ 40%|��������      | 4/10 [12:26<17:56, 179.39s/it]
+ 50%|����������     | 5/10 [14:05<12:32, 150.53s/it]
+ 60%|������������    | 6/10 [15:56<09:09, 137.28s/it]
+ 70%|��������������   | 7/10 [18:23<07:00, 140.20s/it]
+ 80%|����������������  | 8/10 [20:50<04:45, 142.52s/it]
+ 90%|������������������ | 9/10 [23:08<02:20, 140.96s/it]
+100%|��������������������| 10/10 [25:11<00:00, 135.51s/it]
+100%|��������������������| 10/10 [25:11<00:00, 151.15s/it]
+auc: 1.0, acc: 1.0, TPR@1%FPR: 1.0
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync D:\大三\大三下\信息安全\大作业\tree-ring-watermark\wandb\offline-run-20260712_225032-nc5h2d2j[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb\offline-run-20260712_225032-nc5h2d2j\logs[0m
+ 
+--- [E3] ImageNet - JPEG Q=25 
+wandb: Tracking run with wandb version 0.26.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\wandb\offline-run-20260712_231656-pb0x979e
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\run_tree_ring_watermark_imagenet.py:37: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(args.model_path))
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|��         | 1/10 [01:29<13:26, 89.57s/it]
+ 20%|����        | 2/10 [02:55<11:41, 87.67s/it]
+ 30%|������       | 3/10 [04:23<10:13, 87.68s/it]
+ 40%|��������      | 4/10 [05:53<08:50, 88.49s/it]
+ 50%|����������     | 5/10 [09:01<10:21, 124.37s/it]
+ 60%|������������    | 6/10 [10:44<07:48, 117.04s/it]
+ 70%|��������������   | 7/10 [13:27<06:36, 132.06s/it]
+ 80%|����������������  | 8/10 [16:06<04:41, 140.76s/it]
+ 90%|������������������ | 9/10 [17:32<02:03, 123.54s/it]
+100%|��������������������| 10/10 [18:55<00:00, 111.15s/it]
+100%|��������������������| 10/10 [18:55<00:00, 113.56s/it]
+auc: 0.86, acc: 0.9, TPR@1%FPR: 0.8
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync D:\大三\大三下\信息安全\大作业\tree-ring-watermark\wandb\offline-run-20260712_231656-pb0x979e[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb\offline-run-20260712_231656-pb0x979e\logs[0m
+ 
+--- [E4] ImageNet - crop 0.75/0.75 
+wandb: Tracking run with wandb version 0.26.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\wandb\offline-run-20260712_233655-c4v8p0uz
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\run_tree_ring_watermark_imagenet.py:37: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(args.model_path))
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|��         | 1/10 [01:19<11:54, 79.34s/it]
+ 20%|����        | 2/10 [02:37<10:27, 78.44s/it]
+ 30%|������       | 3/10 [03:57<09:14, 79.26s/it]
+ 40%|��������      | 4/10 [06:04<09:49, 98.33s/it]
+ 50%|����������     | 5/10 [10:03<12:24, 148.89s/it]
+ 60%|������������    | 6/10 [13:39<11:26, 171.55s/it]
+ 70%|��������������   | 7/10 [15:10<07:16, 145.37s/it]
+ 80%|����������������  | 8/10 [16:42<04:16, 128.27s/it]
+ 90%|������������������ | 9/10 [20:09<02:32, 152.92s/it]
+100%|��������������������| 10/10 [22:33<00:00, 150.30s/it]
+100%|��������������������| 10/10 [22:33<00:00, 135.37s/it]
+auc: 1.0, acc: 1.0, TPR@1%FPR: 1.0
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync D:\大三\大三下\信息安全\大作业\tree-ring-watermark\wandb\offline-run-20260712_233655-c4v8p0uz[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb\offline-run-20260712_233655-c4v8p0uz\logs[0m
+ 
+--- [E5] ImageNet - gaussian blur r=4 
+wandb: Tracking run with wandb version 0.26.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\wandb\offline-run-20260713_000041-5uatt2x8
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\run_tree_ring_watermark_imagenet.py:37: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(args.model_path))
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|��         | 1/10 [01:18<11:43, 78.19s/it]
+ 20%|����        | 2/10 [02:36<10:24, 78.10s/it]
+ 30%|������       | 3/10 [03:55<09:11, 78.78s/it]
+ 40%|��������      | 4/10 [05:17<07:59, 79.90s/it]
+ 50%|����������     | 5/10 [06:39<06:42, 80.57s/it]
+ 60%|������������    | 6/10 [08:01<05:24, 81.06s/it]
+ 70%|��������������   | 7/10 [09:22<04:03, 81.27s/it]
+ 80%|����������������  | 8/10 [10:43<02:42, 81.17s/it]
+ 90%|������������������ | 9/10 [12:04<01:21, 81.10s/it]
+100%|��������������������| 10/10 [13:25<00:00, 81.09s/it]
+100%|��������������������| 10/10 [13:25<00:00, 80.59s/it]
+auc: 1.0, acc: 1.0, TPR@1%FPR: 1.0
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync D:\大三\大三下\信息安全\大作业\tree-ring-watermark\wandb\offline-run-20260713_000041-5uatt2x8[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb\offline-run-20260713_000041-5uatt2x8\logs[0m
+ 
+--- [E6] ImageNet - gaussian noise std=0.1 
+wandb: Tracking run with wandb version 0.26.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\wandb\offline-run-20260713_001441-d9vhlbv2
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\run_tree_ring_watermark_imagenet.py:37: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(args.model_path))
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|��         | 1/10 [01:19<11:53, 79.30s/it]
+ 20%|����        | 2/10 [02:37<10:30, 78.79s/it]
+ 30%|������       | 3/10 [03:56<09:11, 78.77s/it]
+ 40%|��������      | 4/10 [05:14<07:51, 78.64s/it]
+ 50%|����������     | 5/10 [06:33<06:33, 78.65s/it]
+ 60%|������������    | 6/10 [07:52<05:15, 78.80s/it]
+ 70%|��������������   | 7/10 [09:11<03:56, 78.96s/it]
+ 80%|����������������  | 8/10 [10:31<02:38, 79.23s/it]
+ 90%|������������������ | 9/10 [11:51<01:19, 79.39s/it]
+100%|��������������������| 10/10 [13:10<00:00, 79.29s/it]
+100%|��������������������| 10/10 [13:10<00:00, 79.06s/it]
+auc: 1.0, acc: 1.0, TPR@1%FPR: 1.0
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync D:\大三\大三下\信息安全\大作业\tree-ring-watermark\wandb\offline-run-20260713_001441-d9vhlbv2[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb\offline-run-20260713_001441-d9vhlbv2\logs[0m
+ 
+--- [E7] ImageNet - brightness factor=6 
+wandb: Tracking run with wandb version 0.26.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\wandb\offline-run-20260713_002813-s3oj5w2p
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\run_tree_ring_watermark_imagenet.py:37: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(args.model_path))
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|��         | 1/10 [01:19<11:53, 79.28s/it]
+ 20%|����        | 2/10 [02:37<10:29, 78.70s/it]
+ 30%|������       | 3/10 [03:58<09:19, 79.89s/it]
+ 40%|��������      | 4/10 [05:26<08:17, 82.95s/it]
+ 50%|����������     | 5/10 [06:54<07:03, 84.76s/it]
+ 60%|������������    | 6/10 [10:46<08:59, 134.95s/it]
+ 70%|��������������   | 7/10 [14:58<08:39, 173.26s/it]
+ 80%|����������������  | 8/10 [19:16<06:39, 199.94s/it]
+ 90%|������������������ | 9/10 [21:41<03:03, 183.00s/it]
+100%|��������������������| 10/10 [23:08<00:00, 153.35s/it]
+100%|��������������������| 10/10 [23:08<00:00, 138.88s/it]
+auc: 0.61, acc: 0.75, TPR@1%FPR: 0.5
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync D:\大三\大三下\信息安全\大作业\tree-ring-watermark\wandb\offline-run-20260713_002813-s3oj5w2p[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb\offline-run-20260713_002813-s3oj5w2p\logs[0m
+ 
+============================================== 
+10.6 ImageNet FID - 1 experiment (10 samples) 
+============================================== 
+ 
+--- [F1] ImageNet - FID 
+wandb: Tracking run with wandb version 0.26.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\wandb\offline-run-20260713_010135-60eau5a2
+wandb: Detected [huggingface_hub.inference] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+D:\����\������\��Ϣ��ȫ\����ҵ\tree-ring-watermark\run_tree_ring_watermark_imagenet_fid.py:43: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(args.model_path))
+
+  0%|          | 0/2 [00:00<?, ?it/s]
+ 50%|█████     | 1/2 [01:23<01:23, 83.21s/it]
+100%|██████████| 2/2 [02:49<00:00, 86.13s/it]
+100%|██████████| 2/2 [02:49<00:00, 84.67s/it]
+fid_no_w: 15.87, fid_w: 16.61
+[1;34mwandb[0m:
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync D:\大三\大三下\信息安全\大作业\tree-ring-watermark\wandb\offline-run-20260713_010135-60eau5a2[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb\offline-run-20260713_010135-60eau5a2\logs[0m
+
+==============================================
+Table 3 done! (8/8)
+==============================================
