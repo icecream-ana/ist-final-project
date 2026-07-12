@@ -15,8 +15,8 @@
 ```
 ├── README.md                         # 项目说明
 ├── code                              # 代码
-│   ├── stable_signature              # The Stable Signature 代码
-│   └──                               # 另一版鲁棒性提取器
+│   ├── stable_signature.zip          # The Stable Signature 代码
+│   └──                               # 
 ├── 实验结果                           # 官方 LDM decoder 微调脚本
 │   ├── stable_signature              # The Stable Signature 实验结果
 │       ├── img_metrics.csv           # 评估图像质量完整结果
